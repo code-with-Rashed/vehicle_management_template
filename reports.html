@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vehicle-form-page.css">
+    <link rel="stylesheet" href="css/vehicle-table-page.css">
+    <link rel="stylesheet" href="css/report.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <span class="logo-name">Vehicle Management</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="vehicle-category.html">
+                    Vehicle Category
+                </a>
+            </li>
+            <li>
+                <a href="vehicles.html">
+                    Manage in Vehicle
+                </a>
+            </li>
+            <li>
+                <a href="manage-out-going-vehicle.html">
+                    Manage out Vehicle
+                </a>
+            </li>
+            <li>
+                <a href="reports.html">
+                    Reports
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    Settings
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <span>##</span>
+            </div>
+            <div class="profile-details">
+                <img src="image/user.jpg" alt="profile-image">
+                <span class="admin-name">Hi, Rashed</span>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="content-box">
+                <div class="content-wrap">
+                    <div class="content-status">
+                        <h1>Reports</h1>
+                    </div>
+                    <div class="vehicle-form">
+                        <form action="javascript:void(0)" method="post">
+                            <div class="form-box">
+                                <label for="from-date">From Date</label>
+                                <input type="datetime-local" name="from-date" id="from-date" required>
+                            </div>
+                            <div class="form-box">
+                                <label for="to-date">To Date</label>
+                                <input type="datetime-local" name="to-date" id="to-date" required>
+                            </div>
+                            <div class="form-box">
+                                <label for="type">Type</label>
+                                <select name="type" id="type" onchange="searchOption(this.value)">
+                                    <option value="all">All Records</option>
+                                    <option value="incoming">Incoming Vehicle</option>
+                                    <option value="outgoing">Outgoing Vehicle</option>
+                                    <option value="vehicle_number">Search Vehicle Number</option>
+                                    <option value="owner_name">Search Owner Name</option>
+                                    <option value="owner_phone_number">Search Owner Phone Number</option>
+                                </select>
+                            </div>
+                            <div class="form-box" id="vehicle_number_box">
+                                <label for="vehicle_number">Vehicle Registration Number</label>
+                                <input type="text" name="vehicle_number" id="vehicle_number" required maxlength="50"
+                                    placeholder="Enter Vehicle Registration Number">
+                            </div>
+                            <div class="form-box" id="owner_name_box">
+                                <label for="owner_name">Owner Name</label>
+                                <input type="text" name="owner_name" id="owner_name" required maxlength="50"
+                                    placeholder="Enter Owner Name">
+                            </div>
+                            <div class="form-box" id="owner_phone_number_box">
+                                <label for="owner_phone_number">Owner Phone Number</label>
+                                <input type="number" name="owner_phone_number" id="owner_phone_number" required
+                                    maxlength="12" placeholder="Enter Owner Phone Number">
+                            </div>
+                            <div class="form-submit-box">
+                                <input type="submit" value="Submit" name="save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box">
+                <br>
+                <div class="content-wrap">
+                    <div class="content-print-search">
+                        <button class="print-btn">Print</button>
+                        <input type="search" name="search" id="search" class="search-inp" placeholder="Search...">
+                    </div>
+                    <div class="content-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Parking Number</th>
+                                    <th>Owner Name</th>
+                                    <th>Vehicle Reg Number</th>
+                                    <th>Vehicle Date Time</th>
+                                    <th>Status</th>
+                                    <th>Parking Charge</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>5345</td>
+                                    <td>Rashed</td>
+                                    <td>Dhaka A1046</td>
+                                    <td>
+                                        <span class="dtime"><b>Vehicle In Time : </b>9 Mar, 2023 &nbsp; 08:09:53
+                                            am</span>
+                                        <span class="dtime"><b>Vehicle Out Time : </b>9 Mar, 2023 &nbsp; 08:09:53
+                                            am</span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="active-btn oparation-btn">Vehicle In</a>
+                                    </td>
+                                    <td>&#2547;&nbsp;1200</td>
+                                </tr>
+                                <tr>
+                                    <td>5345</td>
+                                    <td>Rashed</td>
+                                    <td>Dhaka A1046</td>
+                                    <td>
+                                        <span class="dtime"><b>Vehicle In Time : </b>9 Mar, 2023 &nbsp; 08:09:53
+                                            am</span>
+                                        <span class="dtime"><b>Vehicle Out Time : </b>9 Mar, 2023 &nbsp; 08:09:53
+                                            am</span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="inactive-btn oparation-btn">Vehicle Out</a>
+                                    </td>
+                                    <td>&#2547;&nbsp;1200</td>
+                                </tr>
+                                <tr>
+                                    <td>5345</td>
+                                    <td>Rashed</td>
+                                    <td>Dhaka A1046</td>
+                                    <td>
+                                        <span class="dtime"><b>Vehicle In Time : </b>9 Mar, 2023 &nbsp; 08:09:53
+                                            am</span>
+                                        <span class="dtime"><b>Vehicle Out Time : </b>9 Mar, 2023 &nbsp; 08:09:53
+                                            am</span>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="active-btn oparation-btn">Vehicle In</a>
+                                    </td>
+                                    <td>&#2547;&nbsp;1200</td>
+                                </tr>
+                            </tbody>
+                            <tfoot class="total">
+                                <tr>
+                                    <th colspan="5" class="ts">Total Sum : &nbsp;</th>
+                                    <td>&nbsp;&nbsp;&#2547;&nbsp;3600</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="content-pagination">
+                        <span>Showing 1 to 2 of 2 entries</span>
+                        <span>
+                            <a href="" class="pagination-btn">
+                                <button title="Previous Record">
+                                    < </button>
+                            </a>
+                            &nbsp;&nbsp;&nbsp;
+                            <a href="" class="pagination-btn">
+                                <button title="Next Record"> > </button>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="js/app.js"></script>
+    <script src="js/report.js"></script>
+</body>
+
+</html>
