@@ -65,6 +65,9 @@ td {
 }
 
 @media (max-width:1000px) {
+    .content-box{
+        width:96%;
+    }
     .content-wrap {
         overflow-x: scroll;
     }
