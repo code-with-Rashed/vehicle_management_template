@@ -65,11 +65,11 @@ td {
 }
 
 @media (max-width:1000px) {
-    .content-box {
-        width: 700px;
-    }
-
     .content-wrap {
         overflow-x: scroll;
+    }
+    .content-status,
+    .view-vehicle {
+        width: 900px;
     }
 }
