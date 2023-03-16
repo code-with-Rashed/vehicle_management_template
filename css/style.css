@@ -86,10 +86,12 @@
     width: calc(100% - 60px);
 }
 
-.sidebar-button {
+.sidebar-button img{
+    width:2rem;
+    height:2rem;
+    border-radius: 4px;
+    object-fit: cover;
     cursor: pointer;
-    font-size: 24px;
-    font-weight: 500;
 }
 
 .profile-details {
