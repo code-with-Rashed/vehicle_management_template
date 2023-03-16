@@ -116,18 +116,14 @@
     text-decoration: none;
 }
 
-.pagination-btn button {
+.pagination-btn img {
+    width: 30px;
+    height: 30px;
     cursor: pointer;
-    border: 0;
-    margin: 0 5px;
-    width: 40px;
-    height: 40px;
-    background-color: #D85C27;
-    border-radius: 50%;
-    color: #fff;
-    padding: 10px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid  #D85C27;
+    box-shadow: 0 0 20px 0px rgb(0 0 0 / 10%);
+    margin-right: 8px;
 }
 
 @media (max-width:1000px) {
