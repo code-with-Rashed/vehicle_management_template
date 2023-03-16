@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/vehicle-form-page.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <span class="logo-name">Vehicle Management</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a href="vehicle-category.html">
+                    Vehicle Category
+                </a>
+            </li>
+            <li>
+                <a href="vehicles.html">
+                    Manage in Vehicle
+                </a>
+            </li>
+            <li>
+                <a href="manage-out-going-vehicle.html">
+                    Manage out Vehicle
+                </a>
+            </li>
+            <li>
+                <a href="reports.html">
+                    Reports
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <img src="image/menu.png" alt="##">
+            </div>
+            <div class="profile-details">
+                <img src="image/user.jpg" alt="profile-image">
+                <span class="admin-name">Hi, Rashed</span>
+                <div class="profile-options">
+                    <a href="profile.html" class="profile-link">My Profile</a>
+                    <a href="#" class="profile-link">Logout</a>
+                </div>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div class="content-box">
+                <div class="content-wrap">
+                    <div class="content-status">
+                        <h1>Edit Profile</h1>
+                    </div>
+                    <div class="vehicle-form">
+                        <form action="javascript:void(0)" method="post">
+                            <div class="form-box">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Name" required maxlength="50" value="Rashed alam">
+                            </div>
+                            <div class="form-box">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Email" required maxlength="50" value="example@gmail.com">
+                            </div>
+                            <div class="form-box">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" name="phone" id="phone" placeholder="Phone Number" required maxlength="12" value="0192104138">
+                            </div>
+                            <div class="form-box">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username" placeholder="Username" required maxlength="50" value="Admin123">
+                            </div>
+                            <div class="form-box">
+                                <label for="password">Password &nbsp;&nbsp;<small>( Leave password empty if not change in password )</small></label>
+                                <input type="password" name="password" id="password" required maxlength="50">
+                            </div>
+                            <div class="form-submit-box">
+                                <input type="submit" value="Update" name="save">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
