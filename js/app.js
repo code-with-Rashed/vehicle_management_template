@@ -19,3 +19,11 @@ var activePage = () => {
 }
 activePage();
 //---------------------
+
+// Show Profile Options
+let profileDetails = document.querySelector(".profile-details");
+let profileOptions = document.querySelector(".profile-options");
+profileDetails.onclick = () => {
+    profileOptions.classList.toggle("show");
+}
+//---------------------
