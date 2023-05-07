@@ -8,6 +8,7 @@
     <title>Parking Vehicle List</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/vehicle-table-page.css">
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -98,8 +99,8 @@
                                         <a href="view-vehicle.html" class="edit-btn oparation-btn">
                                             <img src="image/eye.png" alt="watch">
                                         </a>
-                                        <a href="#" class="delete-btn oparation-btn">
-                                            <img src="image/delete.png" alt="watch">
+                                        <a href="#" class="delete-btn oparation-btn" onclick="confirm_delete()">
+                                            <img src="image/delete.png" alt="delete">
                                         </a>
                                     </td>
                                 </tr>
@@ -119,8 +120,8 @@
                                         <a href="view-vehicle.html" class="edit-btn oparation-btn">
                                             <img src="image/eye.png" alt="watch">
                                         </a>
-                                        <a href="#" class="delete-btn oparation-btn">
-                                            <img src="image/delete.png" alt="watch">
+                                        <a href="#" class="delete-btn oparation-btn" onclick="confirm_delete()">
+                                            <img src="image/delete.png" alt="delete">
                                         </a>
                                     </td>
                                 </tr>
@@ -140,8 +141,8 @@
                                         <a href="view-vehicle.html" class="edit-btn oparation-btn">
                                             <img src="image/eye.png" alt="watch">
                                         </a>
-                                        <a href="#" class="delete-btn oparation-btn">
-                                            <img src="image/delete.png" alt="watch">
+                                        <a href="#" class="delete-btn oparation-btn" onclick="confirm_delete()">
+                                            <img src="image/delete.png" alt="delete">
                                         </a>
                                     </td>
                                 </tr>
@@ -161,8 +162,8 @@
                                         <a href="view-vehicle.html" class="edit-btn oparation-btn">
                                             <img src="image/eye.png" alt="watch">
                                         </a>
-                                        <a href="#" class="delete-btn oparation-btn">
-                                            <img src="image/delete.png" alt="watch">
+                                        <a href="#" class="delete-btn oparation-btn" onclick="confirm_delete()">
+                                            <img src="image/delete.png" alt="delete">
                                         </a>
                                     </td>
                                 </tr>
@@ -182,8 +183,8 @@
                                         <a href="view-vehicle.html" class="edit-btn oparation-btn">
                                             <img src="image/eye.png" alt="watch">
                                         </a>
-                                        <a href="#" class="delete-btn oparation-btn">
-                                            <img src="image/delete.png" alt="watch">
+                                        <a href="#" class="delete-btn oparation-btn" onclick="confirm_delete()">
+                                            <img src="image/delete.png" alt="delete">
                                         </a>
                                     </td>
                                 </tr>
@@ -205,7 +206,15 @@
             </div>
         </div>
     </section>
+    <div class="popup">
+        <div class="popup-box">
+            <p class="warning-message">Are you sure want to delete this registered vehicle</p>
+            <div class="popup-close" onclick="popup_close()">&times;</div>
+            <a href="#" class="confirm-btn">Confirm</a>
+        </div>
+    </div>
     <script src="js/app.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>
