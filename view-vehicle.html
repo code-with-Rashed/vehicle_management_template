@@ -8,6 +8,7 @@
     <title>View Vehicle</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/view-vehicle-page.css">
+    <link rel="stylesheet" href="css/popup.css">
 </head>
 
 <body>
@@ -93,7 +94,7 @@
                                 </tr>
                                 <tr>
                                     <th>Vehicle In Time</th>
-                                    <td>25/03/2023 - 12:32 PM</td>
+                                    <td>25/03/2023 - 01:00 PM</td>
                                 </tr>
                                 <tr>
                                     <th>Per Hour Charges</th>
@@ -114,14 +115,45 @@
                             </tbody>
                         </table>
                         <div class="vehicle-update-btn">
-                            <button>Update</button>
+                            <button onclick="popup_open()">Update</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="popup">
+        <div class="popup-box">
+            <form action="http://localhost/vehicle/incoming/vehicle/outgoing" method="post">
+                <input type="hidden" name="id" value="1">
+                <input type="hidden" name="vehicle_outtime" value="2023-06-10 03:20 PM">
+                <input type="hidden" name="parking_charges" value="731825">
+                <p>
+                    <strong>In Time : </strong>
+                    <small>25 / 03 / 2023 - 01:00 PM</small>
+                </p>
+                <br>
+                <p>
+                    <strong>Out Time : </strong>
+                    <small>25 / 03 / 2023 - 02:00 PM</small>
+                </p>
+                <br>
+                <p>
+                    <strong>Charge : </strong>
+                    <small>&#2547; 300</small>
+                </p>
+                <br>
+                <p>
+                    <strong>Status : </strong>
+                    <small>Outgoing Vehicle</small>
+                </p>
+                <input type="submit" value="Update" class="confirm-btn">
+            </form>
+            <div class="popup-close" onclick="popup_close()">&times;</div>
+        </div>
+    </div>
     <script src="js/app.js"></script>
+    <script src="js/popup.js"></script>
 </body>
 
 </html>
