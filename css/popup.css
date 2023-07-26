@@ -23,21 +23,23 @@
     text-align: center;
     line-height: 20px;
 }
-.popup-close{
+.popup-close {
     background-color: tomato;
     width: 30px;
     height: 30px;
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
-    color:#fff;
+    color: #fff;
     font-weight: bolder;
     font-size: 1.5rem;
     position: absolute;
     top: -15px;
     right: -15px;
     cursor: pointer;
+    transition: 0.3s;
 }
+
 .confirm-btn{
     display: block;
     margin: 20px auto 0 auto;
@@ -53,6 +55,10 @@
     letter-spacing: 1px;
     width: 100%;
     cursor: pointer;
+    transition: 0.3s;
+}
+.confirm-btn:hover ,.popup-close:hover{
+    background-color: rgba(200, 72, 50);
 }
 @media (max-width:500px) {
     .popup-box {
